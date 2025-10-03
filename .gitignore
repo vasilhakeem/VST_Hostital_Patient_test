@@ -1,0 +1,64 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Django
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+.env
+
+# If you use Django migrations but want to ignore compiled migration files
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.Python
+
+# Coverage / Testing
+.coverage
+*.cover
+*.py,cover
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*,cover
+*.log
+junit.xml
+
+# MyPy / Type checker
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pytest
+.cache/
+
+# Pycharm
+*.iml
+*.ipr
+*.iws
+out/
+
+# Mac / Linux / Windows OS
+.DS_Store
+Thumbs.db
+ehth
