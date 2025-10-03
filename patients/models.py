@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 
 class Doctor(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -18,7 +18,7 @@ class Doctor(models.Model):
 
 
 class Nurse(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, null=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -30,7 +30,7 @@ class Nurse(models.Model):
 
 
 class Patient(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200,null=False)
     room = models.CharField(max_length=50)
     email = models.EmailField(validators=[EmailValidator()])
     doctor = models.ForeignKey(
