@@ -29,7 +29,6 @@ class PatientSerializer(serializers.ModelSerializer):
         read_only_fields = ['created_at', 'updated_at']
 
     def validate_email(self, value):
-        """Validate email uniqueness"""
         patient_id = self.instance.id if self.instance else None
         if Patient.objects.filter(email=value).exclude(id=patient_id).exists():
             raise serializers.ValidationError("A patient with this email already exists.")

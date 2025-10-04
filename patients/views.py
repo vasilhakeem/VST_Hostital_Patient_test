@@ -10,9 +10,6 @@ logger = logging.getLogger(__name__)
 
 
 class PatientViewSet(viewsets.ModelViewSet):
-    """
-    ViewSet for Patient CRUD operations
-    """
     queryset = Patient.objects.all()
     serializer_class = PatientSerializer
     permission_classes = [IsAuthenticated]
@@ -89,14 +86,12 @@ class PatientViewSet(viewsets.ModelViewSet):
 
 
 class DoctorViewSet(viewsets.ModelViewSet):
-    """ViewSet for Doctor CRUD operations"""
     queryset = Doctor.objects.all()
     serializer_class = DoctorSerializer
     permission_classes = [IsAuthenticated]
 
 
 class NurseViewSet(viewsets.ModelViewSet):
-    """ViewSet for Nurse CRUD operations"""
     queryset = Nurse.objects.all()
     serializer_class = NurseSerializer
     permission_classes = [IsAuthenticated]

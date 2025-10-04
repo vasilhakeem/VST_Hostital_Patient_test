@@ -5,7 +5,6 @@ logger = logging.getLogger(__name__)
 
 
 def custom_exception_handler(exc, context):
-    """Custom exception handler for better error logging"""
     response = exception_handler(exc, context)
     
     if response is not None:
